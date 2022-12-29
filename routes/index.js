@@ -7,8 +7,8 @@ router.get("/", async (req, res, next) => {
   try {
     const users = await User.find()
     console.log('request : ', users)
-    // res.json(users)
-    res.render("index", { title: users });
+    res.json(users)
+    // res.render("index", { title: users });
     
   } catch(err) {
     res.status(500).json({message: err.message})
