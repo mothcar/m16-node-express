@@ -25,7 +25,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 const mongoose = require('mongoose');
-const url = "mongodb://admin:admin@svc.gksl2.cloudtype.app:31177/?authMechanism=DEFAULT"
+// const url = "mongodb://admin:admin@svc.gksl2.cloudtype.app:31177/?authMechanism=DEFAULT"
+const url = "mongodb+srv://dbUser:1748atlas@cluster0.thuvp.mongodb.net/walkingcat?retryWrites=true&w=majority"
 mongoose.set('strictQuery', false)
 
 mongoose.connect(url, {useNewUrlParser: true}, (err)=>{

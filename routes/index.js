@@ -15,6 +15,17 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.get("/aa", async (req, res, next) => {
+  try {
+    
+    res.json({msg : 'Good Server ................!!!'})
+    // res.render("index", { title: users });
+    
+  } catch(err) {
+    res.status(500).json({message: err.message})
+  }
+});
+
 router.post("/save", async (req, res, next) => {
   try {
     const insert = req.body 
